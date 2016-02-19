@@ -1,0 +1,45 @@
+.main {
+  width: 70%;
+  margin: 0 auto;
+}
+.fon1 {  /* фон для левой колонки (синий) */
+width: 100%;
+background: #3d2af0;
+float: left; /* делаем все обертки плавающими блоками чтобы избежать добавления блока с clear: both; */
+position: relative; /* чтобы иметь возможность сместить фон */
+right: 30%; /* обнажаем красный фон для центральной колонки. 30% - ширина центральной колонки */
+}
+.fon2 {/* фон для центральной колонки (красный) */
+width: 100%;
+background: #e34456;
+float: left;
+position: relative;
+right: 40%; /* обнажаем желтый фон для правой колонки. 40% - ширина правой колонки */
+}
+.fon3 {/* фон для правой колонки (желтый) */
+width: 100%;
+background: #e3e244;
+float: left;
+overflow: hidden;
+}
+.leftColumn {
+width: 30%;
+float: left;
+overflow: hidden; /* страховка от ломки верстки объектами шире размера колонки-родителя */
+position:relative;
+left:70%; /* возвращаем колонки с контентом на свои позиции. 70% - сумма смещений оберток fon1 и fon2 */
+}
+.centerColumn {
+width: 30%;
+float: left;
+overflow: hidden;
+position:relative;
+left:70%;
+}
+.rightColumn {
+width: 30%;
+float: left;
+overflow: hidden;
+position:relative;
+left:70%;
+}

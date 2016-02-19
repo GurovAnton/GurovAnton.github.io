@@ -1,0 +1,142 @@
+body {
+  background-image: url("../img/background.png");
+  font-family: "Tahoma";
+}
+.body {
+  margin-left: 17.9%;
+  margin-right: 17.9%;
+  background-color: white;
+  -webkit-box-shadow: 0px 4px 14px 1px rgba(0,0,0,0.75);
+ -moz-box-shadow: 0px 4px 14px 1px rgba(0,0,0,0.75);
+  box-shadow: 0px 4px 14px 1px rgba(0,0,0,0.75);
+}
+.logo {
+  padding-left: 2%;
+  color: rgb(18, 138, 167);
+  font-size: 0.75vw;
+  position: relative;
+}
+.logo img{
+  width: 30%;
+}
+.logo p {
+  position: absolute;
+  left: 7%;
+  top: 60%;
+}
+.contacts {
+float: right;
+width: 40%;
+}
+.contacts1 {
+ padding-left: 60%;
+ padding-top: 3%;
+ font-size: 0.75vw;
+ line-height: 1.5;
+ color: rgb(18, 138, 167);
+}
+
+.contries li {
+  float: left;
+  width: 16%;
+  padding-top: 7%;
+  font-size: 0.625vw;
+  color: rgb(18, 138, 167);
+  text-align: center;
+}
+.contries p {
+  color: rgb(18, 138, 167);
+}
+.photo {
+  border-top: 1px solid #138aa7;
+  border-bottom: 1px solid #138aa7;
+}
+.photo img {
+  width: 100%;
+}
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.menu {
+  background-image: linear-gradient(to top, #303030, #373737);
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+   box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+}
+.menu1 {
+  float:left;
+  font-size: 0.875vw;
+  color: #ffffff;
+  padding: 1% 1%;
+  width: 12%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.menu li ul {
+  display: none;
+  position: absolute;
+  left:10%;
+  top: 100%;
+  padding-left: 12%;
+  background-color: #303030;
+  background-image: linear-gradient(to top, #303030, #373737);
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+   box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+   font-size: 0.875vw;
+   color: #ffffff;
+   line-height: 1.5;
+   width: 105%;
+   text-align: left;
+}
+.menu li ul:last-child {
+  padding-bottom: 5%;
+}
+.menu li:hover ul {
+  display: block;
+}
+.parent {
+  width: 100%;
+  overflow: hidden;
+}
+.left-block, .right-block{
+  margin-top: 1px;
+  line-height: 1.5;
+  text-align: center;
+  color: #7d837f;
+  width: 20%;
+  background-color: #edeef0;
+  border: 1px solid #c7cacf;
+  font-size: 0.875vw;
+  padding-bottom: 20000px;
+  margin-bottom: -20000px;
+}
+  h1 {
+  line-height: 1.5;
+  text-align: center;
+  color: #424c43;
+  font-size: 1.125vw;
+}
+.right-block {
+  float: right;
+}
+.footer {
+  text-align: center;
+  color: #c1d3df;
+  font-size: 0.75vw;
+  line-height: 3;
+}
+.contries img {
+  width: 70%;
+}
+.triangle{
+  display: inline-block;
+  border-color: #ffffff #303030 #303030 #303030;
+  border-style: solid;
+  border-width: 8px 3px 0 3px;
+  height: 0;
+  width: 0;
+}

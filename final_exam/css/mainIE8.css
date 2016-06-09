@@ -25,3 +25,8 @@ html {
     letter-spacing: 0!important;
   }
 }
+@media (min-width: 767px) {
+  section {
+    width: 100%;
+  }
+}

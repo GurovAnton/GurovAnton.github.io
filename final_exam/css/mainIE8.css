@@ -8,9 +8,7 @@ html {
 @media (min-width: 960px) {
   .container {
     width:970px !important;
-  }
-  .flexslider{
-    margin-right: 0px!important;
+
   }
   .header__item-logo {
     margin-right: 450px!important;
@@ -20,8 +18,10 @@ html {
   }
 }
 @media (min-width: 768px) {
-  .flexslider{
-    margin-right: 10px!important;
+  .flexslider {
+    margin-right: 5px!important;
   }
-
+  .slides__red {
+    letter-spacing: 0!important;
+  }
 }

@@ -8,7 +8,9 @@ html {
 @media (min-width: 960px) {
   .container {
     width:970px !important;
-
+  }
+  .flexslider{
+    margin-right: 0px!important;
   }
   .header__item-logo {
     margin-right: 450px!important;

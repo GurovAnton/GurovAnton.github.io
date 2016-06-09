@@ -1,7 +1,5 @@
 $( document ).ready(function() {
     $.support.cors = true;
-
-
     $('.flexslider').flexslider({
         animation: "slide",
         controlNav: false,

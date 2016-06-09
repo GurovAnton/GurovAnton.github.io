@@ -1,8 +1,7 @@
 $( document ).ready(function() {
-    'use strict';
     $.support.cors = true;
 
-    getImage();
+
     $('.flexslider').flexslider({
         animation: "slide",
         controlNav: false,
@@ -52,11 +51,10 @@ $( document ).ready(function() {
     function loadImages(data) {
         $('.grid-item').each(function(i) {
             var background = data.images[i].display_sizes[0].uri;
-
             var describe = data.images[i].title;
             $(this).css('background', '#1a1915 url("' + background + '") 50% / cover');
             $(this).children().html(describe);
         });
     }
-
+    getImage();
 });

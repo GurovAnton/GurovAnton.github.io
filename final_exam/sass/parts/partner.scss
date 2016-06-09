@@ -1,0 +1,133 @@
+.partner {
+    padding-top: 39px;
+    text-align: center;
+    font-family: $font-mont-bold;
+    @include tablet {
+      padding-top: 93px;
+    };
+    h3 {
+        font-weight: bold;
+        font-size: 22px;
+        padding: 0 0 14px;
+        line-height: 27px;
+        @include tablet {
+          padding: 0 0 32px;
+        }
+        @include desktop {
+          padding: 0 0 34px;
+        };
+    }
+}
+.partner__wrap {
+  @include tablet {
+    width: 540px;
+    margin: 0 auto;
+    @include clearfix();
+  }
+  @include desktop {
+    width: 960px;
+  }
+}
+.partner__item {
+    position: relative;
+    width: 220px;
+    margin: 0 auto 30px;
+    @include tablet {
+      float: left;
+      margin-left: 34px;
+      margin-bottom: 27px;
+    }
+    @include desktop {
+      margin-left: 20px;
+    }
+}
+.partner__ava {
+    display: block;
+    width: 120px;
+    height: 120px;
+    @include border-radius(60px);
+    margin: auto;
+}
+.partner__title {
+    display: block;
+    font-size: 14px;
+    color: $font-h-color;
+    margin-top: 20px;
+    margin-bottom: 13px;
+    margin-left: -2px;
+}
+.partner__description {
+    font-family: $font-roboto;
+    font-weight: 300;
+    font-size: 14px;
+    color: #8f8f8f;
+}
+.partner__wrapicon {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: solid 4px #fff;
+    position: absolute;
+    top: 85px;
+    right: 46px;
+    box-sizing: border-box;
+    padding: 7px 7px 7px 8px;
+}
+.partner__wrapicon-red {
+    background: #ff4e50;
+}
+.partner__wrapicon-yellow {
+    background: #ffa507;
+}
+.partner__wrapicon-lightblue {
+    background: #1cd7ad;
+}
+.partner__wrapicon-blue {
+    background: #4e73db;
+}
+.partner__icon {
+    width: 16px;
+    height: 16px;
+    background: url("../img/sprite.png") no-repeat;
+}
+.partner__icon-2 {
+      background-position: 1px -32px;
+        height: 18px;
+}
+.partner__icon-3 {
+
+    background-position: 0 -17px;
+
+}
+.partner__icon-4 {
+    background-position: -1px -49px;
+    width: 18px;
+    height: 17px;
+}
+.partner__btn {
+    text-decoration: none;
+    line-height: 36px;
+    width: 280px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 2px solid #ff4e50;
+    color: #ff4e50;
+    display: block;
+    text-align: center;
+    margin-left: 8px;
+    margin-top: 31px;
+    margin: 31px 0 0 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+    &:hover, &:focus {
+      color:#262626;
+    }
+    @include tablet {
+      width: 195px;
+      margin: 46px auto;
+    }
+    @include desktop {
+      margin: 14px 390px;
+    }
+}

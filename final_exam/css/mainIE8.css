@@ -1,0 +1,27 @@
+html {
+  overflow-y: scroll;
+
+}
+.flexslider{
+  overflow: hidden;
+}
+@media (min-width: 960px) {
+  .container {
+    width:970px !important;
+
+  }
+  .header__item-logo {
+    margin-right: 450px!important;
+  }
+  .slides__red {
+    letter-spacing: 0!important;
+  }
+}
+@media (max-width: 959px) {
+  section{
+    width: 768px;
+  }
+  .slides__red {
+    letter-spacing: 0!important;
+  }
+}

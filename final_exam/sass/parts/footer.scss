@@ -1,0 +1,100 @@
+.footer {
+  border-top: 4px solid #ff4e50;
+  margin-top: 41px;
+  padding-top: 18px;
+  font-family: $font-mont-bold;
+  a {
+    text-decoration: none;
+  }
+  @include tablet {
+    margin: 100px 0 0 0;
+  };
+}
+.footer__col {
+  text-align: center;
+  @include tablet {
+    float: left;
+    margin: 20px 0 0 82px;
+  }
+  @include desktop {
+
+    margin-left: 94px;
+  }
+}
+.footer__col-logo {
+  font-weight: bold;
+  margin: 0 0 15px 0;
+  @include tablet {
+    letter-spacing: 1px;
+    margin: 20px 0 15px 28px;
+  }
+  @include desktop {
+    margin-left: 17px;
+  }
+}
+.footer__col-company {
+  margin-right: 21px;
+  @include desktop {
+      margin-right: 0;
+  }
+}
+.footer__logo {
+  color:#ff4e50;
+  &:hover, &:focus {
+    color: #262626;
+  }
+}
+.footer__item {
+  font-size: 14px;
+}
+.footmenu {
+  margin: 2px 0 14px 0;
+
+}
+.footmenu__item {
+  display: inline-block;
+  padding: 0 5px;
+  @include tablet {
+    display: block;
+    text-align: left;
+    margin: 8px 0 0 0;
+    padding: 0;
+    &:first-child {
+      margin: 11px 0 0 0;
+    }
+  }
+  .footmenu__link {
+    color: #8f8f8f;
+    font-family: $font-roboto;
+    font-weight: 300;
+    font-size: 14px;
+    &:hover, &:focus {
+      color:#262626;
+    }
+  }
+}
+.footer__col-design {
+  margin: 11px 0 0 0;
+  @include tablet {
+      margin: 16px 0 0 123px;
+  };
+  @include desktop {
+    float: right;
+  };
+}
+.footer__design {
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #ccc;
+  letter-spacing: 1px;
+  @include tablet {
+    padding-left: 29px;
+  };
+}
+.footer__deslogo {
+  display: block;
+  height: 24px;
+  width: 110px;
+  background-image: url('../img/des.png');
+  margin: 7px auto 15px;
+}

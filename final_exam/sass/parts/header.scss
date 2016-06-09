@@ -1,0 +1,112 @@
+.header {
+    background: #1a1915 url('../img/header-bg.jpg') no-repeat center;
+    background-size: cover;
+    height: 540px;
+    font-family: $font-mont-bold;
+    font-weight: bold;
+    color: $font-white;
+    @include tablet {
+        height: 700px;
+    }
+
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    margin: auto;
+    padding: 0 10px;
+    @include tablet {
+        width: 748px;
+    };
+    @include desktop {
+        width: 960px;
+        padding: 0;
+    }
+}
+.header__menu {
+    text-align: center;
+    padding: 20px 0;
+    @include tablet {
+         @include clearfix;
+        padding: 38px 0;
+    };
+}
+.header__content {
+    text-align: center;
+    h1 {
+        line-height: 34px;
+        font-size: 30px;
+        margin-top: 150px;
+        text-transform: uppercase;
+        @include tablet {
+            margin: 0;
+            line-height: 64px;
+            font-size: 52px;
+            width: 484px;
+            margin: 97px auto 0;
+        };
+    }
+    h2 {
+        line-height: 1.1;
+        font-size: 18px;
+        width: 75%;
+        font-weight: 300;
+        font-family: $font-roboto;
+        margin: 13px auto;
+        @include tablet {
+            font-size: 24px;
+            margin: 23px auto;
+        };
+    }
+}
+.header__item {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: $font-white;
+    font-size: 14px;
+    padding: 9px 16px;
+    &:focus,
+    &:hover {
+        color: #262626;
+    }
+    &:last-child:focus,
+    &:last-child:hover {
+        border: 2px solid #262626;
+    }
+}
+.header__item-logo {
+    position: absolute;
+    letter-spacing: 1px;
+    font-size: 20px;
+    top: 164px;
+    left: 57px;
+    @include tablet {
+        float: left;
+        position: static;
+        margin-right: 281px;
+        padding: 10px 0 10px 38px;
+    }
+    @include desktop {
+        margin-right: 586px;
+        padding: 10px 0 10px 19px;
+    };
+}
+.header__item-sign {
+    border: 2px solid $font-white;
+    @include border-radius(24px);
+}
+.header__item-btn {
+    line-height: 39px;
+    margin-top: 5px;
+    padding: 0;
+    width: 280px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #ff4e50;
+    @include tablet {
+        width: 225px;
+        margin: 12px auto;
+    };
+}

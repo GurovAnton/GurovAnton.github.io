@@ -1,0 +1,112 @@
+.discover {
+    padding-top: 35px;
+    font-family: $font-mont-bold;
+    @include tablet {
+      padding-top: 51px;
+    };
+    @include desktop {
+      padding-top: 83px;
+    };
+    h3 {
+        font-size: 22px;
+        color: $font-h-color;
+        text-align: center;
+        line-height: 25px;
+    }
+    .discover__search {
+        padding-top: 27px;
+        @include tablet {
+          padding-top: 75px;
+        };
+        p {
+            font-family: $font-roboto;
+            margin: 15px 0 16px;
+            @include tablet {
+              margin: 34px 0 28px;
+            };
+            @include desktop {
+              margin: 36px 0 28px;
+            };
+            font-weight: 300;
+            font-size: 18px;
+            text-align: center;
+            color: #696969;
+        }
+    }
+}
+.grid {
+    margin-top: 15px;
+    @include clearfix();
+    @include tablet {
+      margin-top: 35px;
+    };
+    @include desktop {
+      margin-left: 18px;
+    };
+}
+.grid-item {
+    width: 300px;
+    height: 120px;
+    float: left;
+    margin-bottom: 10px;
+    @include border-radius(4px);
+    background-size: 100% 100%;
+    @include tablet {
+      width: 235px;
+      height: 310px;
+      margin-bottom: 20px;
+    }
+    @include desktop {
+      width: 300px;
+    }
+}
+.grid-item--width2 {
+  @include tablet {
+    width: 492px;
+  }
+  @include desktop {
+    width: 620px;
+  }
+}
+.grid-describe {
+
+    font-size: 22px;
+    color: $font-white;
+    text-align: center;
+    // margin-top: 50px;
+    @include vertical-align();
+}
+.discover__input {
+    width: 280px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 1px #eee;
+    border: solid 1px #ccc;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-left: 8px;
+    @include tablet {
+      margin-left: 167px;
+      width: 240px;
+    };
+    @include desktop {
+      margin-left: 282px;
+    };
+}
+.discover__btn {
+    width: 280px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 8px;
+    font-family: $font-mont-bold;
+    font-size: 14px;
+    @include border-radius(20px);
+    background-color: #ff4e50;
+    color: $font-white;
+    @include tablet {
+      width: 160px;
+      margin-left: 6px;
+    };
+
+}

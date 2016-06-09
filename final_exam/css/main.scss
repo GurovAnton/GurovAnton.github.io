@@ -1,0 +1,710 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+$font-mont-bold: 'Montserrat', sans-serif;
+$font-roboto: 'Roboto', sans-serif;
+$font-white: #fff;
+$font-h-color: #333;
+
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 960px;
+@mixin tablet {
+     @media (min-width: #{$tablet-width}){
+        @content;
+    }
+}
+@mixin desktop {
+     @media (min-width: #{$desktop-width}){
+        @content;
+    }
+}
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin clearfix() {
+    &:after,
+    &:before {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+        height: 0;
+        overflow: hidden;
+    }
+}
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote {
+  &:before, &:after {
+    content: '';
+    content: none; } }
+
+q {
+  &:before, &:after {
+    content: '';
+    content: none; } }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.wrapper {
+min-width: 320px;
+  margin: 0 auto;
+  @include tablet {
+min-width: 768px;
+  }
+  @include desktop {
+  min-width: 980px;
+  };
+}
+
+.discover {
+    padding-top: 35px;
+    font-family: $font-mont-bold;
+    @include tablet {
+      padding-top: 51px;
+    };
+    @include desktop {
+      padding-top: 83px;
+    };
+    h3 {
+        font-size: 22px;
+        color: $font-h-color;
+        text-align: center;
+        line-height: 25px;
+    }
+    .discover__search {
+        padding-top: 27px;
+        @include tablet {
+          padding-top: 75px;
+        };
+        p {
+            font-family: $font-roboto;
+            margin: 15px 0 16px;
+            @include tablet {
+              margin: 34px 0 28px;
+            };
+            @include desktop {
+              margin: 36px 0 28px;
+            };
+            font-weight: 300;
+            font-size: 18px;
+            text-align: center;
+            color: #696969;
+        }
+    }
+}
+.grid {
+    margin-top: 15px;
+    @include clearfix();
+    @include tablet {
+      margin-top: 35px;
+    };
+    @include desktop {
+      margin-left: 18px;
+    };
+}
+.grid-item {
+    width: 300px;
+    height: 120px;
+    float: left;
+    margin-bottom: 10px;
+    @include border-radius(4px);
+    background-size: 100% 100%;
+    @include tablet {
+      width: 235px;
+      height: 310px;
+      margin-bottom: 20px;
+    }
+    @include desktop {
+      width: 300px;
+    }
+}
+.grid-item--width2 {
+  @include tablet {
+    width: 492px;
+  }
+  @include desktop {
+    width: 620px;
+  }
+}
+.grid-describe {
+
+    font-size: 22px;
+    color: $font-white;
+    text-align: center;
+    // margin-top: 50px;
+    @include vertical-align();
+}
+.discover__input {
+    width: 280px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 1px #eee;
+    border: solid 1px #ccc;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-left: 8px;
+    @include tablet {
+      margin-left: 167px;
+      width: 240px;
+    };
+    @include desktop {
+      margin-left: 282px;
+    };
+}
+.discover__btn {
+    width: 280px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 8px;
+    font-family: $font-mont-bold;
+    font-size: 14px;
+    @include border-radius(20px);
+    background-color: #ff4e50;
+    color: $font-white;
+    @include tablet {
+      width: 160px;
+      margin-left: 6px;
+    };
+
+}
+
+.footer {
+  border-top: 4px solid #ff4e50;
+  margin-top: 41px;
+  padding-top: 18px;
+  font-family: $font-mont-bold;
+  a {
+    text-decoration: none;
+  }
+  @include tablet {
+    margin: 100px 0 0 0;
+  };
+}
+.footer__col {
+  text-align: center;
+  @include tablet {
+    float: left;
+    margin: 20px 0 0 82px;
+  }
+  @include desktop {
+
+    margin-left: 94px;
+  }
+}
+.footer__col-logo {
+  font-weight: bold;
+  margin: 0 0 15px 0;
+  @include tablet {
+    letter-spacing: 1px;
+    margin: 20px 0 15px 28px;
+  }
+  @include desktop {
+    margin-left: 17px;
+  }
+}
+.footer__col-company {
+  margin-right: 21px;
+  @include desktop {
+      margin-right: 0;
+  }
+}
+.footer__logo {
+  color:#ff4e50;
+  &:hover, &:focus {
+    color: #262626;
+  }
+}
+.footer__item {
+  font-size: 14px;
+}
+.footmenu {
+  margin: 2px 0 14px 0;
+
+}
+.footmenu__item {
+  display: inline-block;
+  padding: 0 5px;
+  @include tablet {
+    display: block;
+    text-align: left;
+    margin: 8px 0 0 0;
+    padding: 0;
+    &:first-child {
+      margin: 11px 0 0 0;
+    }
+  }
+  .footmenu__link {
+    color: #8f8f8f;
+    font-family: $font-roboto;
+    font-weight: 300;
+    font-size: 14px;
+    &:hover, &:focus {
+      color:#262626;
+    }
+  }
+}
+.footer__col-design {
+  margin: 11px 0 0 0;
+  @include tablet {
+      margin: 16px 0 0 123px;
+  };
+  @include desktop {
+    float: right;
+  };
+}
+.footer__design {
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #ccc;
+  letter-spacing: 1px;
+  @include tablet {
+    padding-left: 29px;
+  };
+}
+.footer__deslogo {
+  display: block;
+  height: 24px;
+  width: 110px;
+  background-image: url('../img/des.png');
+  margin: 7px auto 15px;
+}
+
+.header {
+    background: #1a1915 url('../img/header-bg.jpg') no-repeat center;
+    background-size: cover;
+    height: 540px;
+    font-family: $font-mont-bold;
+    font-weight: bold;
+    color: $font-white;
+    @include tablet {
+        height: 700px;
+    }
+
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    margin: auto;
+    padding: 0 10px;
+    @include tablet {
+        width: 748px;
+    };
+    @include desktop {
+        width: 960px;
+        padding: 0;
+    }
+}
+.header__menu {
+    text-align: center;
+    padding: 20px 0;
+    @include tablet {
+         @include clearfix;
+        padding: 38px 0;
+    };
+}
+.header__content {
+    text-align: center;
+    h1 {
+        line-height: 34px;
+        font-size: 30px;
+        margin-top: 150px;
+        text-transform: uppercase;
+        @include tablet {
+            margin: 0;
+            line-height: 64px;
+            font-size: 52px;
+            width: 484px;
+            margin: 97px auto 0;
+        };
+    }
+    h2 {
+        line-height: 1.1;
+        font-size: 18px;
+        width: 75%;
+        font-weight: 300;
+        font-family: $font-roboto;
+        margin: 13px auto;
+        @include tablet {
+            font-size: 24px;
+            margin: 23px auto;
+        };
+    }
+}
+.header__item {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: $font-white;
+    font-size: 14px;
+    padding: 9px 16px;
+    &:focus,
+    &:hover {
+        color: #262626;
+    }
+    &:last-child:focus,
+    &:last-child:hover {
+        border: 2px solid #262626;
+    }
+}
+.header__item-logo {
+    position: absolute;
+    letter-spacing: 1px;
+    font-size: 20px;
+    top: 164px;
+    left: 57px;
+    @include tablet {
+        float: left;
+        position: static;
+        margin-right: 281px;
+        padding: 10px 0 10px 38px;
+    }
+    @include desktop {
+        margin-right: 586px;
+        padding: 10px 0 10px 19px;
+    };
+}
+.header__item-sign {
+    border: 2px solid $font-white;
+    @include border-radius(24px);
+}
+.header__item-btn {
+    line-height: 39px;
+    margin-top: 5px;
+    padding: 0;
+    width: 280px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #ff4e50;
+    @include tablet {
+        width: 225px;
+        margin: 12px auto;
+    };
+}
+
+.partner {
+    padding-top: 39px;
+    text-align: center;
+    font-family: $font-mont-bold;
+    @include tablet {
+      padding-top: 93px;
+    };
+    h3 {
+        font-weight: bold;
+        font-size: 22px;
+        padding: 0 0 14px;
+        line-height: 27px;
+        @include tablet {
+          padding: 0 0 32px;
+        }
+        @include desktop {
+          padding: 0 0 34px;
+        };
+    }
+}
+.partner__wrap {
+  @include tablet {
+    width: 540px;
+    margin: 0 auto;
+    @include clearfix();
+  }
+  @include desktop {
+    width: 960px;
+  }
+}
+.partner__item {
+    position: relative;
+    width: 220px;
+    margin: 0 auto 30px;
+    @include tablet {
+      float: left;
+      margin-left: 34px;
+      margin-bottom: 27px;
+    }
+    @include desktop {
+      margin-left: 20px;
+    }
+}
+.partner__ava {
+    display: block;
+    width: 120px;
+    height: 120px;
+    @include border-radius(60px);
+    margin: auto;
+}
+.partner__title {
+    display: block;
+    font-size: 14px;
+    color: $font-h-color;
+    margin-top: 20px;
+    margin-bottom: 13px;
+    margin-left: -2px;
+}
+.partner__description {
+    font-family: $font-roboto;
+    font-weight: 300;
+    font-size: 14px;
+    color: #8f8f8f;
+}
+.partner__wrapicon {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: solid 4px #fff;
+    position: absolute;
+    top: 85px;
+    right: 46px;
+    box-sizing: border-box;
+    padding: 7px 7px 7px 8px;
+}
+.partner__wrapicon-red {
+    background: #ff4e50;
+}
+.partner__wrapicon-yellow {
+    background: #ffa507;
+}
+.partner__wrapicon-lightblue {
+    background: #1cd7ad;
+}
+.partner__wrapicon-blue {
+    background: #4e73db;
+}
+.partner__icon {
+    width: 16px;
+    height: 16px;
+    background: url("../img/sprite.png") no-repeat;
+}
+.partner__icon-2 {
+      background-position: 1px -32px;
+        height: 18px;
+}
+.partner__icon-3 {
+
+    background-position: 0 -17px;
+
+}
+.partner__icon-4 {
+    background-position: -1px -49px;
+    width: 18px;
+    height: 17px;
+}
+.partner__btn {
+    text-decoration: none;
+    line-height: 36px;
+    width: 280px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 2px solid #ff4e50;
+    color: #ff4e50;
+    display: block;
+    text-align: center;
+    margin-left: 8px;
+    margin-top: 31px;
+    margin: 31px 0 0 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+    &:hover, &:focus {
+      color:#262626;
+    }
+    @include tablet {
+      width: 195px;
+      margin: 46px auto;
+    }
+    @include desktop {
+      margin: 14px 390px;
+    }
+}
+
+
+.steps {
+    font-family: $font-mont-bold;
+    font-weight: bold;
+    padding-top: 37px;
+    @include tablet {
+      padding-top: 100px;
+    };
+    @include desktop {
+      padding-top: 97px;
+    };
+
+    h3 {
+        font-size: 22px;
+        color: $font-h-color;
+        text-align: center;
+    }
+    .flexslider {
+        box-sizing: border-box;
+        width: 300px;
+        margin-bottom: -6px;
+        margin-top: 16px;
+        position: relative;
+        border: none;
+        @include tablet {
+          display: inline-block;
+          width:235px;
+          margin-top: 33px;
+          margin-right: 17px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        @include desktop {
+          width: 300px;
+          margin-right: 0;
+          margin-left: 17px;
+
+        }
+        div {
+            @include border-radius(4px);
+        }
+        .flex-direction-nav {
+            visibility: hidden;
+            @include tablet {
+              visibility: visible;
+            }
+        }
+        .flex-next  {
+          width:30px;
+          height: 60px;
+          display: block;
+          background-image: url('../img/sprite.png');
+          background-position: 31px 68px;
+          @include desktop {
+            top: 43%;
+            margin-left: 12px;
+            margin-right: 12px;
+          }
+        }
+        .flex-prev {
+          @extend .flex-next;
+          background-image: url('../img/sprite.png');
+          background-position: 0 68px;
+        }
+    }
+}
+.slides__caption {
+  position: absolute;
+  width: 300px;
+  top:69px;
+  color: $font-white;
+  @include tablet {
+    top:210px;
+    width: 235px;
+  };
+  @include desktop {
+    top: 229px;
+    width: 300px;
+  };
+}
+.slides__red {
+    margin-left: 20px;
+    width: 70px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #ff4e50;
+    font-size: 10px;
+    line-height: 21px;
+    text-transform: uppercase;
+    cursor: default;
+    box-sizing: border-box;
+    padding: 0 14px;
+    margin-bottom: 14px;
+    text-align: center;
+    letter-spacing: 1px;
+    @include tablet {
+      margin-bottom: 19px;
+    };
+}
+.slide__title{
+  display: block;
+  padding-top: 2px;
+  margin-left: 20px;
+  font-size: 22px;
+  line-height: 27px;
+  letter-spacing: 1px;
+  @include tablet {
+    letter-spacing: 1px;
+  };
+}
+
+.slide__desription {
+  display: block;
+  line-height: 16px;
+  font-size: 14px;
+  font-family: $font-roboto;
+  font-weight: 300;
+  padding: 16px 18px 0 20px;
+  color: #ccc;
+  @include tablet {
+    line-height: 16px;
+    padding: 16px;
+  };
+  @include desktop {
+    padding: 13px 20px 0 20px;
+
+  };
+}
+.slides__item {
+  display: block;
+  background: #1a1915 url('../img/step1.jpg');
+  height: 240px;
+  width: 300px;
+  @include tablet {
+    height: 400px;
+    width: 235px;
+    background-position: center;
+  };
+  @include desktop {
+    width:300px;
+  };
+}
+.slides__item-1 {
+  background:#1a1915 url('../img/step1.jpg');
+}
+.slides__item-2{
+    background:#1a1915 url('../img/step2.jpg');
+}
+.slides__item-3{
+    background:#1a1915 url('../img/step3.jpg');
+}

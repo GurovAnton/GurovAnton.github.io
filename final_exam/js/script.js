@@ -1,6 +1,6 @@
 $( document ).ready(function() {
   // Only continue if we're on IE8/IE9 with jQuery 1.5+ (contains the ajaxTransport function)
-  // if (!$.support.cors || $.ajaxTransport || window.XDomainRequest) {
+  if (!$.support.cors || $.ajaxTransport || window.XDomainRequest) {
 
     var httpRegEx = /^(https?:)?\/\//i;
     var getOrPostRegEx = /^get|post$/i;
@@ -93,7 +93,7 @@ $( document ).ready(function() {
         }
       };
     });
-  // }
+  }
     $.support.cors = true;
 
 

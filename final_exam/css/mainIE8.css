@@ -18,15 +18,8 @@ html {
   }
 }
 @media (min-width: 768px) and (max-width: 959px) {
-  section{
-    width: 768px;
+  .flexslider{
+    margin-right: 10px!important;
   }
-  .slides__red {
-    letter-spacing: 0!important;
-  }
-}
-@media (min-width: 767px) {
-  section {
-    width: 100%;
-  }
+
 }

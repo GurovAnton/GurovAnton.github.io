@@ -15,6 +15,7 @@ html {
 }
 @media (min-width: 768px) {
   .flexslider {
+    margin-left: 5px!important;
     margin-right: 5px!important;
   }
   .slides__red {

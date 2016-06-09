@@ -17,7 +17,7 @@ html {
     letter-spacing: 0!important;
   }
 }
-@media (min-width: 768px) and (max-width: 959px) {
+@media (min-width: 768px) {
   .flexslider{
     margin-right: 10px!important;
   }

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/lodash/4.11.2/lodash.min.js" charset="utf-8"></script>
+    <script data-main="js/main" src="js/lib/require.js" charset="utf-8"></script>
+    <title>Customer List</title>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <div class="wrapper">
+        <div class="header">
+            <div class="container">
+                <div class="header__desc">
+                    <p class="header__name">Customer List Application</p>
+                    <p class="header__name">Try it!</p>
+                </div>
+
+                <!-- разметка элементов управления -->
+                <ul class="headmenu">
+                    <li class="headmenu__item"><a class="headmenu__link headmenu__link-list" href="" title="It will show your saved lists">Show list</a></li>
+                    <li class="headmenu__item"><a class="headmenu__link headmenu__link-clear" href="">Clear All</a></li>
+                </ul>
+
+                <div class="select__container">
+                    <input type="text" class="new-company" placeholder="New company name" />
+                    <button type="button" name="button" class="btn btn-savecomp">Add company</button>
+                    <button type="button" name="button" class="btn btn-delcomp">Delete company</button>
+                    <div class="">
+                        <select class="selection" name="">
+                        </select>
+                        <button type="button" name="button" class="btn btn-create">Create customer</button>
+                    </div>
+                </div>
+                <!-- конец разметки элементов управления -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Customer</th>
+                            <th>Email</th>
+                            <th>Telephone</th>
+                            <th>City</th>
+                        </tr>
+                    </thead>
+                    <tbody class="list">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- шаблон для выбора списка -->
+        <script type="text/template" id="option">
+
+            <% for (var i = 0; i < list.length; i++) { %>
+                <option value="<%= list[i]%>">
+                    <%= list[i]%>
+                </option>
+                <% }; %>
+
+        </script>
+        <!-- конец шаблона выбора списка -->
+        <!-- шаблон таблицы -->
+        <script type="text/template" id="list-container">
+            <% for (var i = 0; i < list.length; i++) { %>
+                <tr class="list__row">
+                    <% _.forEach(list[i], function(value, key) { %>
+                        <td class="list__item" data-value="<%= value %>">
+                            <%= value %>
+                        </td>
+
+                        <%  }) %>
+                            <% _.forEach(adr[i], function(value, key) { %>
+                                <td class="list__item" data-value="<%= value.city %>">
+                                    <%= value.city %>
+                                </td>
+
+                                <%  }) %>
+                </tr>
+                <% }; %>
+        </script>
+        <!-- конец шалона таблицы -->
+        <!-- шаблон модального окна -->
+        <script type="text/template" id="info-container">
+            <div class="modal_result">
+                <div class="container">
+                    <div class="main_info">
+                        <p class="info_head">Main information</p>
+
+                        <div class="info-group">
+                            <label for="name">Name</label>
+                            <input class="main_input" id="name" type="text" value="<% if (list) { %><%= list.name %> <%} else {%><%= " " %><%}%>"/>
+                        </div>
+                        <div class="info-group">
+                            <label for="email">Email</label>
+                            <input class="main_input" id="email" type="text" value="<% if (list) { %><%= list.email %> <%} else {%><%= " " %><%}%>"/>
+                        </div>
+                        <div class="info-group">
+                            <label for="telephone">Telephone</label>
+                            <input class="main_input" id="telephone" type="text" value="<% if (list) { %><%= list.telephone %> <%} else {%><%= " " %><%}%>"/>
+                        </div>
+                    </div>
+                    <div class="main_info">
+                        <p class="info_head">Adress information</p>
+                        <div class="info-group">
+                            <label for="city">City</label>
+                            <input class="adress_input" id="city" type="text" value="<% if (adr) { %><%= adr.adress.city %> <%} else {%><%= " " %><%}%>"/>
+                        </div>
+                        <div class="info-group">
+                            <label for="street">Street</label>
+                            <input class="adress_input" id="street" type="text" value="<% if (adr) { %><%= adr.adress.street %> <%} else {%><%= " " %><%}%>"/>
+                        </div>
+                        <div class="info-group">
+                            <label for="state">State</label>
+                            <input class="adress_input" id="state" type="text" value="<% if (adr) { %><%= adr.adress.state %> <%} else {%><%= " " %><%}%>"/>
+                        </div>
+                        <div class="info-group">
+                            <label for="zip">Zip</label>
+                            <input class="adress_input" id="zip" type="text" value="<% if (adr) { %><%= adr.adress.zip %> <%} else {%><%= " " %><%}%>"/>
+                        </div>
+                    </div>
+                    <div class="info-ctrl">
+                        <button type="button" name="button" class="btn btn-upd">Update</button>
+                        <button type="button" name="button" class="btn btn-del">Delete</button>
+                        <button type="button" name="button" class="btn btn-cls">Close</button>
+                    </div>
+                </div>
+            </div>
+        </script>
+      <!-- конец шаблона модального окна -->
+
+
+    </div>
+
+</body>
+
+</html>

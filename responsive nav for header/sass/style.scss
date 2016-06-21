@@ -1,0 +1,159 @@
+* {
+    @include box-sizing(border-box);
+}
+body {
+    font-family: $font;
+    background: $body__bg;
+}
+.container {
+    display: table;
+    width: 80%;
+    margin: 0 auto;
+    background: $bgc;
+    position: relative;
+    color: $font_color;
+    -webkit-box-shadow: 2px 5px 11px 1px rgba(0,0,0,0.65);
+    -moz-box-shadow: 2px 5px 11px 1px rgba(0,0,0,0.65);
+    box-shadow: 2px 5px 11px 1px rgba(0,0,0,0.65);
+}
+.cont {
+    display: table-cell;
+}
+.container__left {
+    width: 90%;
+    padding: 31px 0;
+    @include desktop {
+        width: 20%;
+    };
+}
+.container__right {
+    width: 40%;
+    text-align: left;
+    @include desktop {
+        text-align: right;
+    };
+}
+.menu {
+    position: fixed;
+    top: 78px;
+    right: -290px;
+    -webkit-box-shadow: 2px 5px 11px 1px rgba(0,0,0,0.65);
+    -moz-box-shadow: 2px 5px 11px 1px rgba(0,0,0,0.65);
+    box-shadow: 2px 5px 11px 1px rgba(0,0,0,0.65);
+    @include desktop {
+        position: static;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    };
+}
+.menu__list {
+    background: $menu_bgc;
+    @include desktop {
+      background: transparent;
+    };
+}
+.menu__item {
+    display: block;
+    @include desktop {
+        display: inline-block;
+    };
+}
+.menu__link {
+    display: block;
+    color: $font_color;
+    text-decoration: none;
+    padding: 15px 50px 15px 5px;
+    border: 1px solid transparent;
+    &:hover {
+        @include desktop {
+             @include border-radius(3px);
+            border: 1px solid $border-color;
+        };
+        color: $color-hover;
+    }
+    @include desktop {
+        padding: 15px;
+    };
+}
+.button {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    width: 78px;
+    height: 78px;
+    background: $bg-button;
+    &.active .button__inner span {
+        visibility: hidden;
+        opacity: 0;
+        width: 0;
+    }
+    @include desktop {
+        display: none;
+    };
+    &.active .button__inner::before {
+        -moz-transform: translate(-1px, 12px) rotate(-45deg);
+        -ms-transform: translate(-1px, 12px) rotate(-45deg);
+        -webkit-transform: translate(-1px, 12px) rotate(-45deg);
+        -o-transform: translate(-1px, 12px) rotate(-45deg);
+        transform: translate(-1px, 12px) rotate(-45deg);
+    }
+    &.active .button__inner::after {
+        -moz-transform: translate(-1px, -11px) rotate(45deg);
+        -ms-transform: translate(-1px, -11px) rotate(45deg);
+        -webkit-transform: translate(-1px, -11px) rotate(45deg);
+        -o-transform: translate(-1px, -11px) rotate(45deg);
+        transform: translate(-1px, -11px) rotate(45deg);
+    }
+}
+.button__inner {
+    width: 32px;
+    height: 26px;
+    margin: 26px auto;
+    position: relative;
+    span {
+        display: block;
+        height: 3px;
+        background: white;
+        position: absolute;
+        width: 100%;
+        top: calc(50% - 2px);
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        -ms-transition: all 300ms ease;
+        -o-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+    &:before {
+        content: '';
+        width: 100%;
+        display: block;
+        height: 3px;
+        background: white;
+        position: absolute;
+        left: 0;
+        top: 0;
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        -ms-transition: all 300ms ease;
+        -o-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+    &:after {
+        content: '';
+        width: 100%;
+        display: block;
+        height: 3px;
+        background: white;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        -ms-transition: all 300ms ease;
+        -o-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+}

@@ -1,32 +1,35 @@
 
 
+
 $(function () {
-	$.support.cors = true;
+
 	var date;
-	var api = "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=EUR&valcode=USD&json";
+	var api = "http://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=EUR&json";
 	date = new Date();
 	console.log(date);
 	
+ $.ajax({
+            url: api,
+   
 
 
-var request = $.ajax({
-    url: api,
- 
-    // The name of the callback parameter, as specified by the YQL service
-  
- 
-    // Tell jQuery we're expecting JSONP
-    dataType: "json",
- 
-    // Tell YQL what we want and that we want JSON
+            dataType: "json",
+         
+         
 
- 
-    // Work with the response
-    success: function( response ) {
-        console.log( response ); // server response
-    }
+            success: function (res) {
+                console.log("success");
+               
+                console.log( res);
+            },
+            error: function (xhr, status, error) {
+                console.log(xhr);
+                console.log(status);
+                console.log(error);
+            }
 });
-	 
+
+
 
   });
       

@@ -1,0 +1,29 @@
+#cont {
+	width:70%;
+	font-family: Calibri, Arial, sans-serif;
+	color: white;
+	font-size: 20px;
+	margin: 0 auto;
+	text-align: center;
+}
+#dates p {
+	color: black;
+}
+.results {
+	padding: 7px 0 7px 0;
+}
+.min {
+	background: #D8A397;
+}
+.max {
+	background: #ADA99F;
+	}
+.aver {
+	background: #0F543F;
+}
+.correl {
+	background: #03332B;
+}
+.controls {
+	margin-top: 25px;
+}

@@ -1,16 +1,47 @@
 <!DOCTYPE HTML>
 <html>
-
+<head>
+<meta charset="UTF-8">
+<title>Curency</title>
+<link rel="stylesheet" href="main.css">
+</head>
 <body>
+
 <div id="cont">
-	<button class="double">double</button>
-
+		<div id="dates">
+			<p> From <span id="fd"></span> To <span id="sd"></span></p>
+			<span id="sd"></span>
+			<p id="time"></p>
+		</div>	
+		<div class="results min">
+			<p>MinRate <span id="minRate"></span></p>
+			<p>Date   <span id="minRateDate"></span></p>
+			
+		</div>
+		<div  class="results max">
+			<p>MaxRate <span id="maxRate"></span></p>
+			<p>Date <span id="maxRateDate"></span></p>
+			
+		</div>
+		<div  class="results aver">
+			<p>AverRate <span id="aver_rate"></span></p>
+			<p>Days for average <span id="count"></span></p>
+		</div>
+		<div  class="results correl">
+			<p>Correlation <span id="result_correl"></span>	</p>
+			
+		</div>
+		<div class="controls">
+			<button id="min_max">Solve</button>
+			<button id="average">Average</button>
+			<button id="correl">Correlation</button>
+		</div>
+		
 </div>
+
+
 	
-
-
-	<script src="jquery-3.1.0.min.js"></script>
 	<script src="main.js"></script>
-
+	
 </body>
 </html>

@@ -1,0 +1,6 @@
+{
+	"verbose": true,
+	"env": {
+		"PORT": 3002
+	}
+}
